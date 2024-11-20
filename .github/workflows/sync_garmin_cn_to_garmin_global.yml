@@ -4,7 +4,9 @@ on:
   workflow_dispatch:
   schedule:
     #  每6小时检查一次
-    - cron: "0 */6 * * *"
+    #- cron: "0 */6 * * *"
+    #每天早上9点和晚上8点同步一次数据
+    - cron: '0 1,12 * * ?'
   push:
     branches:
       - main
